@@ -1,3 +1,4 @@
+import streamlit as st
 from flask import Flask, request, redirect, url_for, render_template_string, send_file
 import requests
 from bs4 import BeautifulSoup
@@ -210,4 +211,5 @@ def download_image():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,use_reloader=False)
+
